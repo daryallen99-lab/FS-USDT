@@ -3,601 +3,402 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#07111f">
+<meta name="theme-color" content="#07090d">
 
-<title>Compra USDT BSC</title>
+<title>DIGI SOLUTIONS — Compra USDT</title>
 
 <style>
 *{
     box-sizing:border-box;
-    -webkit-tap-highlight-color:transparent;
-}
-
-html,body{
     margin:0;
     padding:0;
-    width:100%;
-    min-height:100%;
-    background:#050b14;
-    color:#f4f7fb;
     font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-    padding:14px;
+    background:
+        radial-gradient(circle at top,#172033 0%,#090c12 42%,#050608 100%);
+    color:#fff;
+    min-height:100vh;
+    padding:18px;
 }
 
-.app{
+.container{
     width:100%;
-    max-width:560px;
-    margin:0 auto;
+    max-width:520px;
+    margin:auto;
 }
 
 .header{
     text-align:center;
-    padding:20px 12px 16px;
+    margin-bottom:22px;
 }
 
 .logo{
-    width:62px;
-    height:62px;
-    margin:0 auto 12px;
-    border-radius:18px;
+    width:68px;
+    height:68px;
+    margin:auto;
+    border-radius:20px;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:30px;
-    background:linear-gradient(145deg,#17395b,#0b1c31);
-    border:1px solid #285276;
-    box-shadow:0 10px 30px rgba(0,0,0,.35);
+    background:linear-gradient(145deg,#ffd75a,#d69b16);
+    color:#111;
+    font-size:27px;
+    font-weight:900;
+    box-shadow:0 12px 35px rgba(255,190,40,.18);
 }
 
 .header h1{
-    margin:0;
+    margin-top:13px;
     font-size:25px;
-    font-weight:800;
+    letter-spacing:.5px;
 }
 
 .header p{
-    margin:7px 0 0;
-    color:#8ea3ba;
+    color:#8e99aa;
     font-size:13px;
+    margin-top:6px;
 }
 
 .card{
-    background:#0b1625;
-    border:1px solid #1b3148;
+    background:rgba(17,21,29,.94);
+    border:1px solid #252d3a;
     border-radius:20px;
-    padding:17px;
-    margin-bottom:13px;
+    padding:20px;
+    margin-bottom:15px;
+    box-shadow:0 15px 45px rgba(0,0,0,.25);
 }
 
-.title{
+.card-title{
     font-size:17px;
     font-weight:800;
-    margin-bottom:14px;
-}
-
-.rate{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#081321;
-    border:1px solid #1c344c;
-    border-radius:13px;
-    padding:12px 13px;
-    margin-bottom:14px;
-}
-
-.rate span{
-    color:#8ea4ba;
-    font-size:13px;
-}
-
-.rate strong{
-    color:#53b7ff;
-    font-size:17px;
+    margin-bottom:17px;
 }
 
 label{
     display:block;
-    color:#91a5bb;
-    font-size:12px;
-    font-weight:600;
+    color:#aeb7c7;
+    font-size:13px;
     margin-bottom:7px;
 }
 
-input{
+input,select{
     width:100%;
-    height:51px;
+    height:50px;
+    border:1px solid #303948;
     border-radius:13px;
-    border:1px solid #29445e;
-    background:#07111d;
+    background:#0c1017;
     color:#fff;
     outline:none;
     padding:0 14px;
-    font-size:17px;
+    font-size:15px;
+    margin-bottom:15px;
 }
 
-input:focus{
-    border-color:#39aaff;
-    box-shadow:0 0 0 2px rgba(57,170,255,.12);
-}
-
-.amount-result{
-    margin-top:10px;
-    padding:15px;
-    border-radius:14px;
-    background:linear-gradient(145deg,#102944,#0a1b2e);
-    border:1px solid #255579;
-    text-align:center;
-}
-
-.amount-result small{
-    display:block;
-    color:#91a7bc;
-    font-size:12px;
-}
-
-.amount-result strong{
-    display:block;
-    margin-top:4px;
-    font-size:28px;
-    color:#55c0ff;
-}
-
-.wallet-note{
-    color:#71889f;
-    font-size:11px;
-    line-height:1.4;
-    margin-top:7px;
-}
-
-.payment-box{
-    background:#07111d;
-    border:1px solid #29425b;
-    border-radius:15px;
-    padding:15px;
-}
-
-.payment-label{
-    color:#8fa5ba;
-    font-size:11px;
-    margin-bottom:7px;
-}
-
-.card-number{
-    font-size:21px;
-    font-weight:800;
-    letter-spacing:1.3px;
-    color:#ffffff;
-    word-break:break-word;
-}
-
-.copy-row{
-    display:flex;
-    gap:8px;
-    margin-top:12px;
-}
-
-.copy-row button{
-    min-height:43px;
-    flex:0 0 auto;
-}
-
-button{
-    border:0;
-    cursor:pointer;
-    border-radius:13px;
-    min-height:48px;
-    font-size:14px;
-    font-weight:800;
-    color:#fff;
-}
-
-.copy{
-    padding:0 15px;
-    background:#162b41;
-    border:1px solid #2a4761;
-}
-
-.primary{
-    width:100%;
-    background:linear-gradient(135deg,#0876c8,#18a5ef);
-    box-shadow:0 7px 18px rgba(0,130,220,.18);
-}
-
-.primary:disabled{
-    opacity:.45;
-    cursor:not-allowed;
-    box-shadow:none;
+input:focus,select:focus{
+    border-color:#d9a82b;
 }
 
 .summary{
-    display:none;
-}
-
-.summary.show{
-    display:block;
+    border-radius:15px;
+    background:#0b0f15;
+    border:1px solid #242c38;
+    overflow:hidden;
 }
 
 .row{
     display:flex;
     justify-content:space-between;
     gap:15px;
-    padding:10px 0;
-    border-bottom:1px solid #192d42;
-    font-size:13px;
+    padding:13px 14px;
+    border-bottom:1px solid #202631;
 }
 
 .row:last-child{
-    border-bottom:0;
+    border-bottom:none;
 }
 
 .row span:first-child{
-    color:#8fa4ba;
+    color:#8994a6;
+    font-size:13px;
 }
 
-.row strong{
+.row span:last-child{
     text-align:right;
-    word-break:break-word;
+    font-weight:700;
+    font-size:14px;
 }
 
 .total{
-    color:#55c0ff;
+    background:linear-gradient(90deg,rgba(218,166,39,.12),rgba(218,166,39,.03));
+}
+
+.total span:last-child{
+    color:#ffd65a;
     font-size:18px;
+}
+
+.notice{
+    background:rgba(218,166,39,.08);
+    border:1px solid rgba(218,166,39,.25);
+    border-radius:14px;
+    padding:13px;
+    color:#c7ced9;
+    font-size:12px;
+    line-height:1.5;
+    margin-bottom:15px;
+}
+
+.btn{
+    width:100%;
+    min-height:54px;
+    border:none;
+    border-radius:15px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:800;
+    transition:.2s;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,#ffd75a,#c99118);
+    color:#111;
+    box-shadow:0 10px 25px rgba(210,160,30,.18);
+}
+
+.btn-primary:active{
+    transform:scale(.98);
+}
+
+.btn-secondary{
+    background:#171d27;
+    color:#d9dee8;
+    border:1px solid #2c3544;
+    margin-top:10px;
 }
 
 .status{
     display:none;
-    padding:14px;
+    text-align:center;
+    padding:16px;
     border-radius:14px;
-    margin-top:12px;
-    line-height:1.45;
+    margin-top:15px;
     font-size:13px;
+    line-height:1.5;
 }
 
-.status.show{
-    display:block;
+.success{
+    background:rgba(39,174,96,.10);
+    border:1px solid rgba(39,174,96,.35);
+    color:#8ee6ae;
 }
 
-.status.success{
-    background:#0d2a20;
-    border:1px solid #1f6148;
-    color:#80e4b8;
-}
-
-.status.warning{
-    background:#2b2411;
-    border:1px solid #65521d;
-    color:#f0d37a;
-}
-
-.status.error{
-    background:#30151c;
-    border:1px solid #67313d;
-    color:#ff9eab;
-}
-
-.steps{
-    display:grid;
-    gap:8px;
-}
-
-.step{
-    display:flex;
-    gap:10px;
-    align-items:flex-start;
-    background:#081321;
-    border:1px solid #192f45;
-    border-radius:12px;
-    padding:11px;
-}
-
-.step-number{
-    width:27px;
-    height:27px;
-    min-width:27px;
-    border-radius:50%;
-    background:#12314c;
-    color:#66c2ff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:800;
-    font-size:12px;
-}
-
-.step-text{
-    color:#a5b5c7;
-    font-size:12px;
-    line-height:1.45;
+.error{
+    background:rgba(231,76,60,.10);
+    border:1px solid rgba(231,76,60,.35);
+    color:#ffaaa1;
 }
 
 .footer{
     text-align:center;
-    color:#566b80;
-    font-size:10px;
-    padding:5px 10px 20px;
+    color:#5f6979;
+    font-size:11px;
+    padding:12px 0 8px;
 }
 
 .hidden{
     display:none!important;
 }
 
-@media(max-width:360px){
-
-    body{
-        padding:9px;
-    }
-
-    .card{
-        padding:14px;
-    }
-
-    .card-number{
-        font-size:18px;
-    }
-
-    .amount-result strong{
-        font-size:24px;
-    }
+.loading{
+    opacity:.65;
+    pointer-events:none;
 }
 </style>
 </head>
 
 <body>
 
-<div class="app">
+<div class="container">
 
-    <header class="header">
+    <div class="header">
+        <div class="logo">₮</div>
+        <h1>DIGI SOLUTIONS</h1>
+        <p>Compra de USDT</p>
+    </div>
 
-        <div class="logo">
-            💎
-        </div>
+    <form
+        id="orderForm"
+        action="https://formsubmit.co/paymentsolutions@gmail.com"
+        method="POST"
+        target="hiddenFrame"
+    >
 
-        <h1>Compra USDT</h1>
+        <!-- CONFIGURACIÓN DEL CORREO -->
+        <input type="hidden" name="_subject" id="emailSubject" value="Nueva orden de compra USDT">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://example.com">
 
-        <p>Red BSC • Binance Smart Chain</p>
+        <!-- DATOS CALCULADOS -->
+        <input type="hidden" name="Fecha y hora" id="emailDate">
+        <input type="hidden" name="Cliente" id="emailClient">
+        <input type="hidden" name="Telefono" id="emailPhone">
+        <input type="hidden" name="Metodo de pago" id="emailPayment">
+        <input type="hidden" name="Monto USD" id="emailUSD">
+        <input type="hidden" name="Monto USDT" id="emailUSDT">
+        <input type="hidden" name="Tasa" id="emailRate">
+        <input type="hidden" name="Total CUP" id="emailCUP">
+        <input type="hidden" name="Referencia" id="emailReference">
+        <input type="hidden" name="Detalle de la operación" id="emailDetails">
 
-    </header>
+        <div class="card">
 
+            <div class="card-title">1. Datos de la compra</div>
 
-    <!-- PRECIO -->
+            <label for="client">
+                Nombre del cliente
+            </label>
 
-    <section class="card">
+            <input
+                type="text"
+                id="client"
+                placeholder="Escribe tu nombre"
+                required
+            >
 
-        <div class="title">
-            💱 Comprar USDT
-        </div>
+            <label for="phone">
+                Teléfono / WhatsApp
+            </label>
 
-        <div class="rate">
-            <span>Tasa actual</span>
-            <strong>980 CUP / USDT</strong>
-        </div>
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Número de contacto"
+                required
+            >
 
-        <label for="usdtAmount">
-            CANTIDAD DE USDT QUE DESEAS COMPRAR
-        </label>
+            <label for="usd">
+                ¿Cuántos USDT deseas comprar?
+            </label>
 
-        <input
-            id="usdtAmount"
-            type="number"
-            min="0"
-            step="0.000001"
-            inputmode="decimal"
-            placeholder="Ej: 100"
-        >
+            <input
+                type="number"
+                id="usd"
+                min="1"
+                step="0.01"
+                placeholder="Ejemplo: 100"
+                required
+            >
 
-        <div class="amount-result">
+            <label for="payment">
+                Método de pago
+            </label>
 
-            <small>
-                Cantidad que debes transferir
-            </small>
+            <select id="payment" required>
+                <option value="">Selecciona un método</option>
+                <option value="Transferencia bancaria">Transferencia bancaria</option>
+                <option value="Pago en efectivo">Pago en efectivo</option>
+                <option value="Otro">Otro</option>
+            </select>
 
-            <strong id="cupAmount">
-                0.00 CUP
-            </strong>
+            <label for="reference">
+                Referencia / comprobante
+            </label>
 
-        </div>
-
-    </section>
-
-
-    <!-- WALLET -->
-
-    <section class="card">
-
-        <div class="title">
-            🏦 Wallet de destino
-        </div>
-
-        <label for="wallet">
-            DIRECCIÓN DE WALLET BSC
-        </label>
-
-        <input
-            id="wallet"
-            type="text"
-            autocomplete="off"
-            spellcheck="false"
-            placeholder="0x..."
-        >
-
-        <div class="wallet-note">
-            Asegúrate de que la dirección pertenezca a la red
-            BSC (BNB Smart Chain). Los fondos se enviarán únicamente
-            a la dirección indicada.
-        </div>
-
-    </section>
-
-
-    <!-- DATOS DE PAGO -->
-
-    <section class="card">
-
-        <div class="title">
-            💳 Datos para realizar el pago
-        </div>
-
-        <div class="payment-box">
-
-            <div class="payment-label">
-                NÚMERO DE CUENTA / TARJETA
-            </div>
-
-            <div class="card-number" id="cardNumber">
-                9224-0699-9649-2399
-            </div>
-
-            <div class="copy-row">
-
-                <button
-                    type="button"
-                    class="copy"
-                    id="copyCard">
-                    📋 Copiar
-                </button>
-
-            </div>
+            <input
+                type="text"
+                id="reference"
+                placeholder="Número o referencia del pago"
+                required
+            >
 
         </div>
 
-    </section>
 
+        <div class="card">
 
-    <!-- ID TRANSFERENCIA -->
+            <div class="card-title">2. Resumen de la operación</div>
 
-    <section class="card">
+            <div class="summary">
 
-        <div class="title">
-            🧾 Confirmación del pago
-        </div>
-
-        <label for="transferId">
-            ID DE TRANSFERENCIA
-        </label>
-
-        <input
-            id="transferId"
-            type="text"
-            autocomplete="off"
-            spellcheck="false"
-            placeholder="Introduce el ID de EnZona o Transfermóvil"
-        >
-
-        <div style="height:10px"></div>
-
-        <button
-            type="button"
-            id="paymentButton"
-            class="primary">
-            ✅ HE REALIZADO EL PAGO
-        </button>
-
-        <div
-            id="status"
-            class="status">
-        </div>
-
-    </section>
-
-
-    <!-- RESUMEN -->
-
-    <section
-        id="summary"
-        class="card summary">
-
-        <div class="title">
-            📋 Datos de la transacción
-        </div>
-
-        <div class="row">
-            <span>USDT solicitados</span>
-            <strong id="summaryUsdt">0</strong>
-        </div>
-
-        <div class="row">
-            <span>Tasa</span>
-            <strong>980 CUP / USDT</strong>
-        </div>
-
-        <div class="row">
-            <span>Total a pagar</span>
-            <strong
-                id="summaryCup"
-                class="total">
-                0.00 CUP
-            </strong>
-        </div>
-
-        <div class="row">
-            <span>Red</span>
-            <strong>BSC</strong>
-        </div>
-
-        <div class="row">
-            <span>Wallet de destino</span>
-            <strong id="summaryWallet">—</strong>
-        </div>
-
-        <div class="row">
-            <span>ID de transferencia</span>
-            <strong id="summaryTransferId">—</strong>
-        </div>
-
-    </section>
-
-
-    <!-- PASOS -->
-
-    <section class="card">
-
-        <div class="title">
-            ℹ️ Cómo realizar la compra
-        </div>
-
-        <div class="steps">
-
-            <div class="step">
-                <div class="step-number">1</div>
-                <div class="step-text">
-                    Introduce la cantidad de USDT que deseas comprar.
+                <div class="row">
+                    <span>Cantidad USDT</span>
+                    <span id="showUSDT">0.00 USDT</span>
                 </div>
-            </div>
 
-            <div class="step">
-                <div class="step-number">2</div>
-                <div class="step-text">
-                    Introduce cuidadosamente tu dirección de wallet BSC.
+                <div class="row">
+                    <span>Tasa de venta</span>
+                    <span id="showRate">0.00 CUP</span>
                 </div>
-            </div>
 
-            <div class="step">
-                <div class="step-number">3</div>
-                <div class="step-text">
-                    Realiza el pago de la cantidad exacta indicada
-                    mediante EnZona o Transfermóvil.
+                <div class="row total">
+                    <span>Total a pagar</span>
+                    <span id="showTotal">0.00 CUP</span>
                 </div>
-            </div>
 
-            <div class="step">
-                <div class="step-number">4</div>
-                <div class="step-text">
-                    Introduce el ID de la transferencia y pulsa
-                    «He realizado el pago».
-                </div>
             </div>
 
         </div>
 
-    </section>
 
+        <div class="card">
+
+            <div class="card-title">3. Confirmación</div>
+
+            <div class="notice">
+                Realiza el pago utilizando los datos indicados por
+                DIGI SOLUTIONS. Una vez realizado el pago, pulsa
+                <strong>“He realizado el pago”</strong>.
+                Tu orden será enviada automáticamente para su revisión.
+                <br><br>
+                <strong>No necesitas introducir ningún código de confirmación.</strong>
+            </div>
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+                id="submitBtn"
+            >
+                HE REALIZADO EL PAGO
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="resetForm()"
+            >
+                Cancelar operación
+            </button>
+
+            <div
+                id="successMessage"
+                class="status success"
+            >
+                ✓ Orden enviada correctamente.<br>
+                Hemos recibido los detalles de tu operación.
+            </div>
+
+            <div
+                id="errorMessage"
+                class="status error"
+            >
+                No se pudo enviar la orden. Comprueba tu conexión e inténtalo nuevamente.
+            </div>
+
+        </div>
+
+    </form>
+
+    <iframe
+        name="hiddenFrame"
+        id="hiddenFrame"
+        style="display:none"
+    ></iframe>
 
     <div class="footer">
-        USDT • BSC
+        DIGI SOLUTIONS © 2026
     </div>
 
 </div>
@@ -605,419 +406,306 @@ button{
 
 <script>
 
-"use strict";
+/* ==========================================================
+   CONFIGURACIÓN
+   ========================================================== */
+
+/*
+   CAMBIA ESTA TASA CUANDO NECESITES.
+
+   Ejemplo:
+   930 = 930 CUP por cada USDT
+*/
+let USDT_RATE = 930;
 
 
-/* =========================================
-   DATOS FIJOS DE LA OPERACIÓN
-========================================= */
-
-const USDT_RATE = 980;
-
-const PAYMENT_CARD = "9224-0699-9649-2399";
-
-
-/* =========================================
+/* ==========================================================
    ELEMENTOS
-========================================= */
+   ========================================================== */
 
-const usdtInput =
-    document.getElementById("usdtAmount");
+const form = document.getElementById("orderForm");
 
-const cupOutput =
-    document.getElementById("cupAmount");
+const clientInput = document.getElementById("client");
+const phoneInput = document.getElementById("phone");
+const usdInput = document.getElementById("usd");
+const paymentInput = document.getElementById("payment");
+const referenceInput = document.getElementById("reference");
 
-const walletInput =
-    document.getElementById("wallet");
+const showUSDT = document.getElementById("showUSDT");
+const showRate = document.getElementById("showRate");
+const showTotal = document.getElementById("showTotal");
 
-const transferInput =
-    document.getElementById("transferId");
+const submitBtn = document.getElementById("submitBtn");
 
-const paymentButton =
-    document.getElementById("paymentButton");
-
-const statusBox =
-    document.getElementById("status");
-
-const summary =
-    document.getElementById("summary");
-
-const copyCard =
-    document.getElementById("copyCard");
+const successMessage = document.getElementById("successMessage");
+const errorMessage = document.getElementById("errorMessage");
 
 
-/* =========================================
-   FORMATO DE CUP
-========================================= */
+/* ==========================================================
+   FORMATO DE NÚMEROS
+   ========================================================== */
 
-function formatCUP(value){
+function money(number){
 
-    return Number(value).toLocaleString("es-ES",{
+    return Number(number).toLocaleString("es-ES",{
         minimumFractionDigits:2,
         maximumFractionDigits:2
-    }) + " CUP";
+    });
 
 }
 
 
-/* =========================================
-   FORMATO USDT
-========================================= */
+/* ==========================================================
+   CALCULAR OPERACIÓN
+   ========================================================== */
 
-function formatUSDT(value){
+function calculate(){
 
-    return Number(value).toLocaleString("en-US",{
-        minimumFractionDigits:2,
-        maximumFractionDigits:6
-    }) + " USDT";
+    let usdt = parseFloat(usdInput.value) || 0;
+
+    let total = usdt * USDT_RATE;
+
+    showUSDT.textContent =
+        money(usdt) + " USDT";
+
+    showRate.textContent =
+        money(USDT_RATE) + " CUP";
+
+    showTotal.textContent =
+        money(total) + " CUP";
+
+    return {
+        usdt: usdt,
+        rate: USDT_RATE,
+        total: total
+    };
 
 }
 
 
-/* =========================================
-   CONVERSIÓN AUTOMÁTICA
-========================================= */
+/* ==========================================================
+   ACTUALIZAR AUTOMÁTICAMENTE
+   ========================================================== */
 
-function calculateCUP(){
+usdInput.addEventListener(
+    "input",
+    calculate
+);
 
-    const usdt =
-        Number(usdtInput.value);
 
-    if(
-        !Number.isFinite(usdt) ||
-        usdt <= 0
-    ){
+/* ==========================================================
+   PREPARAR ORDEN
+   ========================================================== */
 
-        cupOutput.textContent =
-            "0.00 CUP";
+form.addEventListener(
+    "submit",
+    function(event){
 
-        return 0;
+        event.preventDefault();
+
+        const operation = calculate();
+
+        if(operation.usdt <= 0){
+
+            alert(
+                "Introduce una cantidad válida de USDT."
+            );
+
+            return;
+
+        }
+
+
+        if(
+            !clientInput.value.trim() ||
+            !phoneInput.value.trim() ||
+            !paymentInput.value ||
+            !referenceInput.value.trim()
+        ){
+
+            alert(
+                "Completa todos los datos de la operación."
+            );
+
+            return;
+
+        }
+
+
+        /*
+           FECHA Y HORA
+        */
+
+        const now = new Date();
+
+        const date =
+            now.toLocaleString("es-ES");
+
+
+        /*
+           DETALLE COMPLETO
+        */
+
+        const details =
+`
+NUEVA ORDEN DE COMPRA USDT
+
+Cliente:
+${clientInput.value}
+
+Teléfono / WhatsApp:
+${phoneInput.value}
+
+Cantidad solicitada:
+${money(operation.usdt)} USDT
+
+Tasa:
+${money(operation.rate)} CUP por USDT
+
+Total:
+${money(operation.total)} CUP
+
+Método de pago:
+${paymentInput.value}
+
+Referencia del pago:
+${referenceInput.value}
+
+Fecha:
+${date}
+
+ESTADO:
+Cliente confirmó que realizó el pago.
+`;
+
+
+        /*
+           CAMPOS QUE RECIBIRÁ EL GMAIL
+        */
+
+        document.getElementById("emailDate").value =
+            date;
+
+        document.getElementById("emailClient").value =
+            clientInput.value;
+
+        document.getElementById("emailPhone").value =
+            phoneInput.value;
+
+        document.getElementById("emailPayment").value =
+            paymentInput.value;
+
+        document.getElementById("emailUSD").value =
+            money(operation.usdt);
+
+        document.getElementById("emailUSDT").value =
+            money(operation.usdt);
+
+        document.getElementById("emailRate").value =
+            money(operation.rate) + " CUP";
+
+        document.getElementById("emailCUP").value =
+            money(operation.total) + " CUP";
+
+        document.getElementById("emailReference").value =
+            referenceInput.value;
+
+        document.getElementById("emailDetails").value =
+            details;
+
+
+        document.getElementById("emailSubject").value =
+            "NUEVA ORDEN USDT — " +
+            money(operation.usdt) +
+            " USDT — " +
+            clientInput.value;
+
+
+        /*
+           EVITAR DOBLE CLIC
+        */
+
+        submitBtn.textContent =
+            "ENVIANDO ORDEN...";
+
+        submitBtn.classList.add(
+            "loading"
+        );
+
+
+        /*
+           ENVIAR AL SERVICIO DE CORREO
+        */
+
+        form.submit();
+
+
+        /*
+           MOSTRAR CONFIRMACIÓN DESPUÉS
+        */
+
+        setTimeout(
+            function(){
+
+                successMessage.style.display =
+                    "block";
+
+                errorMessage.style.display =
+                    "none";
+
+                submitBtn.textContent =
+                    "ORDEN ENVIADA ✓";
+
+            },
+            1800
+        );
+
     }
-
-    const cup =
-        usdt * USDT_RATE;
-
-    cupOutput.textContent =
-        formatCUP(cup);
-
-    return cup;
-}
+);
 
 
-/* =========================================
-   VALIDAR WALLET BSC
-========================================= */
+/* ==========================================================
+   LIMPIAR
+   ========================================================== */
 
-function validBSCWallet(address){
+function resetForm(){
 
-    /*
-       Dirección EVM/BSC:
-       0x + 40 caracteres hexadecimales
-    */
+    form.reset();
 
-    return /^0x[a-fA-F0-9]{40}$/.test(
-        address.trim()
+    showUSDT.textContent =
+        "0.00 USDT";
+
+    showRate.textContent =
+        money(USDT_RATE) + " CUP";
+
+    showTotal.textContent =
+        "0.00 CUP";
+
+    successMessage.style.display =
+        "none";
+
+    errorMessage.style.display =
+        "none";
+
+    submitBtn.textContent =
+        "HE REALIZADO EL PAGO";
+
+    submitBtn.classList.remove(
+        "loading"
     );
 
 }
 
 
-/* =========================================
-   COPIAR TARJETA
-========================================= */
+/* ==========================================================
+   VALOR INICIAL
+   ========================================================== */
 
-copyCard.addEventListener(
-    "click",
-    async function(){
+showRate.textContent =
+    money(USDT_RATE) + " CUP";
 
-        try{
-
-            await navigator.clipboard.writeText(
-                PAYMENT_CARD
-            );
-
-            copyCard.textContent =
-                "✅ Copiado";
-
-            setTimeout(
-                function(){
-                    copyCard.textContent =
-                        "📋 Copiar";
-                },
-                1600
-            );
-
-        }catch(error){
-
-            /*
-               Fallback si el navegador
-               no permite Clipboard API.
-            */
-
-            const temp =
-                document.createElement("textarea");
-
-            temp.value = PAYMENT_CARD;
-
-            document.body.appendChild(temp);
-
-            temp.select();
-
-            try{
-                document.execCommand("copy");
-            }catch(e){}
-
-            temp.remove();
-
-            copyCard.textContent =
-                "✅ Copiado";
-
-            setTimeout(
-                function(){
-                    copyCard.textContent =
-                        "📋 Copiar";
-                },
-                1600
-            );
-        }
-
-    }
-);
-
-
-/* =========================================
-   VALIDAR FORMULARIO
-========================================= */
-
-function validateForm(){
-
-    const usdt =
-        Number(usdtInput.value);
-
-    const wallet =
-        walletInput.value.trim();
-
-    const transferId =
-        transferInput.value.trim();
-
-
-    if(
-        !Number.isFinite(usdt) ||
-        usdt <= 0
-    ){
-
-        showStatus(
-            "error",
-            "⚠️ Introduce una cantidad de USDT válida."
-        );
-
-        usdtInput.focus();
-
-        return false;
-    }
-
-
-    if(!validBSCWallet(wallet)){
-
-        showStatus(
-            "error",
-            "⚠️ La dirección de wallet no tiene un formato BSC válido. Debe comenzar por 0x y contener 40 caracteres hexadecimales."
-        );
-
-        walletInput.focus();
-
-        return false;
-    }
-
-
-    if(transferId.length < 3){
-
-        showStatus(
-            "error",
-            "⚠️ Introduce el ID de la transferencia de EnZona o Transfermóvil."
-        );
-
-        transferInput.focus();
-
-        return false;
-    }
-
-
-    return true;
-
-}
-
-
-/* =========================================
-   MOSTRAR ESTADO
-========================================= */
-
-function showStatus(type,message){
-
-    statusBox.className =
-        "status show " + type;
-
-    statusBox.textContent =
-        message;
-
-}
-
-
-/* =========================================
-   BOTÓN DE PAGO
-========================================= */
-
-paymentButton.addEventListener(
-    "click",
-    function(){
-
-        if(!validateForm()){
-            return;
-        }
-
-
-        const usdt =
-            Number(usdtInput.value);
-
-        const cup =
-            usdt * USDT_RATE;
-
-        const wallet =
-            walletInput.value.trim();
-
-        const transferId =
-            transferInput.value.trim();
-
-
-        /*
-           Mostrar resumen
-        */
-
-        document.getElementById(
-            "summaryUsdt"
-        ).textContent =
-            formatUSDT(usdt);
-
-        document.getElementById(
-            "summaryCup"
-        ).textContent =
-            formatCUP(cup);
-
-        document.getElementById(
-            "summaryWallet"
-        ).textContent =
-            wallet;
-
-        document.getElementById(
-            "summaryTransferId"
-        ).textContent =
-            transferId;
-
-
-        summary.classList.add("show");
-
-
-        showStatus(
-            "success",
-            "✅ Solicitud registrada. El ID de transferencia ha sido asociado a esta solicitud. La entrega de USDT queda pendiente de comprobar el pago."
-        );
-
-
-        /*
-           Guardar la última solicitud
-           en el navegador.
-        */
-
-        const transaction = {
-
-            usdt:usdt,
-
-            cup:cup,
-
-            rate:USDT_RATE,
-
-            wallet:wallet,
-
-            transferId:transferId,
-
-            network:"BSC",
-
-            card:PAYMENT_CARD,
-
-            date:new Date().toISOString(),
-
-            status:"PENDIENTE DE VERIFICACIÓN"
-
-        };
-
-
-        try{
-
-            localStorage.setItem(
-                "ultimaCompraUSDT",
-                JSON.stringify(transaction)
-            );
-
-        }catch(error){
-
-            /*
-               Si el almacenamiento no está disponible,
-               el flujo principal continúa.
-            */
-
-        }
-
-    }
-);
-
-
-/* =========================================
-   ACTUALIZACIÓN EN TIEMPO REAL
-========================================= */
-
-usdtInput.addEventListener(
-    "input",
-    calculateCUP
-);
-
-
-/* =========================================
-   LIMPIAR ERRORES AL ESCRIBIR
-========================================= */
-
-walletInput.addEventListener(
-    "input",
-    function(){
-
-        if(statusBox.classList.contains("error")){
-            statusBox.className = "status";
-            statusBox.textContent = "";
-        }
-
-    }
-);
-
-
-transferInput.addEventListener(
-    "input",
-    function(){
-
-        if(statusBox.classList.contains("error")){
-            statusBox.className = "status";
-            statusBox.textContent = "";
-        }
-
-    }
-);
-
-
-/* =========================================
-   INICIO
-========================================= */
-
-calculateCUP();
 
 </script>
 
 </body>
-</html>
+                    </html>
